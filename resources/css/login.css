@@ -12,7 +12,7 @@ body {
     align-items: center;
     min-height: 100vh;
     /* Ganti URL ini dengan path gambar gedung yang kamu miliki */
-    background-image: url('/try/login/assets/gedung.png');
+    background-image: url('/surat-digital/resources/assets/gedung.png');
     background-size: cover;
     background-position: center;
     position: relative;
