@@ -158,7 +158,7 @@
         
         <ul class="nav-menu">
             <li><a href="/surat-digital/resources/views/dashboard-dosen.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-            <li><a href="/surat-digital/resources/views/surat-masuk.blade.php" class="nav-item"><i class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a></li>        
+            <li><a href="/surat-digital/resources/views/data-mahasiswa-dosen.blade.php" class="nav-item"><i class="fa-solid fa-users"></i> Data Mahasiswa</a></li>
         </ul>
 
         <a href="/surat-digital/resources/views/login.blade.php" class="btn-keluar">

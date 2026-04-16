@@ -168,8 +168,8 @@
 
     <ul class="nav-menu">
         <li><a href="/surat-digital/resources/views/dashboard-admin.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-        <li><a href="/surat-digital/resources/views/surat-masuk.blade.php" class="nav-item"><i class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a></li>
-        <li><a href="/surat-digital/resources/views/riwayat.blade.php" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Riwayat</a></li>
+        <li><a href="/surat-digital/resources/views/surat-masuk-admin.blade.php" class="nav-item"><i class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a></li>
+        <li><a href="/surat-digital/resources/views/riwayat-admin.blade.php" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Riwayat</a></li>
     </ul>
 
     <a href="/surat-digital/resources/views/login.blade.php" class="btn-keluar">
