@@ -153,12 +153,12 @@
     </div>
 
     <ul class="nav-menu">
-        <li><a href="/try/login/html/dashboard-admin.html" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-        <li><a href="/try/login/html/surat-masuk.html" class="nav-item"><i class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a></li>
-        <li><a href="/try/login/html/riwayat.html" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Riwayat</a></li>
+        <li><a href="/surat-digital/resources/views/dashboard-admin.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+        <li><a href="/surat-digital/resources/views/surat-masuk.blade.php" class="nav-item"><i class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a></li>
+        <li><a href="/surat-digital/resources/views/riwayat.blade.php" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Riwayat</a></li>
     </ul>
 
-    <a href="login.html" class="btn-keluar">
+    <a href="/surat-digital/resources/views/login.blade.php" class="btn-keluar">
         <i class="fa-solid fa-circle-left"></i> Keluar
     </a>
 </div>
