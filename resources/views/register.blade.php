@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi SI-JTI</title>
-    <link rel="stylesheet" href="/try/login/css/register.css">
+    <link rel="stylesheet" href="/resources/css/register.css">
 </head>
 <body>
     <div class="overlay"></div> <div class="container">
