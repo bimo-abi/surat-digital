@@ -31,7 +31,7 @@
 
             <p class="divider">Atau</p>
 
-            <a href="/try/login/html/register.html" class="btn-secondary">Daftar Akun</a>
+            <a href="/surat-digital/resources/views/register.blade.php" class="btn-secondary">Daftar Akun</a>
         </form>
     </div>
 
