@@ -30,4 +30,13 @@ class User extends Authenticatable
         ];
     }
 
+    public function detail()
+    {
+        return $this->hasOne(DetailPengguna::class);
+    }
+
+    public function surats()
+    {
+        return $this->hasMany(Surat::class, 'pemohon_id');
+    }
 }
