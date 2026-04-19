@@ -11,15 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // PERINTAH PERTAMA (PAKAI YANG INI SAJA)
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('peran', ['admin', 'dosen', 'mahasiswa'])->default('mahasiswa');
+            $table->boolean('is_aktif')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });
+
+        // --- BLOK YANG KEDUA DI SINI TADI HARUS DIHAPUS ---
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
