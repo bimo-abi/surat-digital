@@ -14,7 +14,6 @@
             overflow-x: hidden;
         }
 
-        /* Sidebar Styling */
         .sidebar {
             width: 240px;
             height: 100vh;
