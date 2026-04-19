@@ -20,7 +20,7 @@
             overflow-x: hidden;
         }
 
-        /* ==================== SIDEBAR ==================== */
+        /* SIDEBAR */
         .sidebar {
             width: 240px;
             height: 100vh;
@@ -125,7 +125,7 @@
             margin-right: 10px;
             font-size: 20px;
         }
-        /* ==================== MAIN CONTENT ==================== */
+        /*  MAIN CONTENT  */
         .main-wrapper {
             margin-left: 240px;
             min-height: 100vh;
@@ -166,7 +166,7 @@
             padding: 30px;
         }
 
-        /* ==================== PENGAJUAN SURAT ==================== */
+        /* PENGAJUAN SURAT  */
         .section-header {
             text-align: center;
             margin-bottom: 30px;
@@ -258,7 +258,7 @@
             transform: none;
         }
 
-        /* ==================== RESPONSIVE ==================== */
+        /*  RESPONSIVE  */
         @media (max-width: 992px) {
             .sidebar {
                 width: 100%;
