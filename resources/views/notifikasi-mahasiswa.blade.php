@@ -349,16 +349,16 @@
         </div>
         
         <ul class="nav-menu">
-            <li><a href="#" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a href="/surat-digital/resources/views/dashboard-mahasiswa.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
             <li>
                 <a href="#" class="nav-item"><i class="fa-solid fa-envelope"></i> Surat <i class="fa-solid fa-chevron-down ms-auto" style="font-size: 12px;"></i></a>
                 <div class="dropdown-menu-custom">
-                    <a href="#" class="dropdown-item-custom">Pengajuan Surat</a>
+                    <a href="/surat-digital/resources/views/pengajuan-surat-mahasiswa.blade.php" class="dropdown-item-custom">Pengajuan Surat</a>
                     <a href="#" class="dropdown-item-custom">Daftar Pengajuan Surat</a>
                 </div>
             </li>
-            <li><a href="#" class="nav-item active"><i class="fa-solid fa-bell"></i> Notifikasi</a></li>
-            <li><a href="#" class="nav-item"><i class="fa-solid fa-user"></i> Profil</a></li>
+            <li><a href="/surat-digital/resources/views/notifikasi-mahasiswa.blade.php" class="nav-item active"><i class="fa-solid fa-bell"></i> Notifikasi</a></li>
+            <li><a href="/surat-digital/resources/views/profil-mahasiswa.blade.php" class="nav-item"><i class="fa-solid fa-user"></i> Profil</a></li>
         </ul>
 
         <a href="#" class="btn-keluar">
