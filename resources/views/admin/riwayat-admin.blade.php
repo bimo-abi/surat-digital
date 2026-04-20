@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mahasiswa - SI-JTI</title>
+    <title>Riwayat - SI-JTI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -149,12 +149,13 @@
 
     <div class="admin-profile">
         <div class="profile-img"></div>
-        <span>Dosen</span>
+        <span>Admin</span>
     </div>
 
     <ul class="nav-menu">
-        <li><a href="/surat-digital/resources/views/dashboard-dosen.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-        <li><a href="/surat-digital/resources/views/data-mahasiswa-dosen.blade.php" class="nav-item"><i class="fa-solid fa-users"></i> Data Mahasiswa</a></li>
+        <li><a href="/surat-digital/resources/views/admin/dashboard-admin.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+        <li><a href="/surat-digital/resources/views/admin/surat-masuk-admin.blade.php" class="nav-item"><i class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a></li>
+        <li><a href="/surat-digital/resources/views/admin/riwayat-admin.blade.php" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Riwayat</a></li>
     </ul>
 
     <a href="/surat-digital/resources/views/login.blade.php" class="btn-keluar">

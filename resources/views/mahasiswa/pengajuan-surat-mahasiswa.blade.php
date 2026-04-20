@@ -287,16 +287,16 @@
         </div>
         
         <ul class="nav-menu">
-            <li><a href="/surat-digital/resources/views/dashboard-mahasiswa.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a href="/surat-digital/resources/views/mahasiswa/dashboard-mahasiswa.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
             <li>
                 <a href="#" class="nav-item"><i class="fa-solid fa-envelope"></i> Surat <i class="fa-solid fa-chevron-down ms-auto" style="font-size: 12px;"></i></a>
             <div class="dropdown-menu-custom">
-                <a href="/surat-digital/resources/views/pengajuan-surat-mahasiswa.blade.php" class="nav-item active">Pengajuan Surat</a>
-                <a href="/surat-digital/resources/views/daftar-pengajuan-surat.blade.php" class="submenu-item">Daftar Pengajuan Surat</a>
+                <a href="/surat-digital/resources/views/mahasiswa/pengajuan-surat-mahasiswa.blade.php" class="nav-item active">Pengajuan Surat</a>
+                <a href="/surat-digital/resources/views/mahasiswa/daftar-pengajuan-surat-mahasiswa.blade.php" class="submenu-item">Daftar Pengajuan Surat</a>
             </div>
             </li>
-            <li><a href="/surat-digital/resources/views/notifikasi-mahasiswa.blade.php" class="nav-item"><i class="fa-solid fa-bell"></i> Notifikasi</a></li>
-            <li><a href="/surat-digital/resources/views/profil-mahasiswa.blade.php" class="nav-item"><i class="fa-solid fa-user"></i> Profil</a></li>
+            <li><a href="/surat-digital/resources/views/mahasiswa/notifikasi-mahasiswa.blade.php" class="nav-item"><i class="fa-solid fa-bell"></i> Notifikasi</a></li>
+            <li><a href="/surat-digital/resources/views/mahasiswa/profil-mahasiswa.blade.php" class="nav-item"><i class="fa-solid fa-user"></i> Profil</a></li>
         </ul>
 
         <a href="#" class="btn-keluar">
