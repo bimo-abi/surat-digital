@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('golongan_id')->nullable()->constrained('golongans')->onDelete('set null');
             $table->string('nomor_telepon', 20)->nullable();
             $table->text('alamat')->nullable();
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 

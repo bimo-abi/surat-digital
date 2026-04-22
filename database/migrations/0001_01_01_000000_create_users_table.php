@@ -21,7 +21,7 @@ return new class extends Migration
             $table->enum('peran', ['admin', 'dosen', 'mahasiswa'])->default('mahasiswa');
             $table->boolean('is_aktif')->default(true);
             $table->rememberToken();
-            $table->timestamps();
+            // $table->timestamps();
         });
 
         // --- BLOK YANG KEDUA DI SINI TADI HARUS DIHAPUS ---
@@ -29,7 +29,7 @@ return new class extends Migration
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
-            $table->timestamp('created_at')->nullable();
+            // $table->timestamp('created_at')->nullable();
         });
 
         // Schema::create('sessions', function (Blueprint $table) {

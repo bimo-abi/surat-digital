@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +66,10 @@
             transition: 0.3s;
         }
 
-        .nav-item i { margin-right: 10px; font-size: 18px; }
+        .nav-item i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
 
         .btn-keluar {
             margin-top: auto;
@@ -95,13 +99,15 @@
             font-weight: bold;
         }
 
-        .content-body { padding: 30px; }
+        .content-body {
+            padding: 30px;
+        }
 
         .card-panel {
             background: white;
             border-radius: 12px;
             padding: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
         table {
@@ -109,7 +115,8 @@
             border-collapse: collapse;
         }
 
-        table th, table td {
+        table th,
+        table td {
             border: 1px solid #ccc;
             padding: 10px;
             font-size: 14px;
@@ -158,91 +165,96 @@
 
 <body>
 
-<div class="sidebar">
-    <h2>SI - JTI</h2>
+    <div class="sidebar">
+        <h2>SI - JTI</h2>
 
-    <div class="admin-profile">
-        <div class="profile-img"></div>
-        <span>Admin</span>
-    </div>
-
-    <ul class="nav-menu">
-        <li><a href="/surat-digital/resources/views/admin/dashboard-admin.blade.php" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-        <li><a href="/surat-digital/resources/views/admin/surat-masuk-admin.blade.php" class="nav-item"><i class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a></li>
-        <li><a href="/surat-digital/resources/views/admin/riwayat-admin.blade.php" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Riwayat</a></li>
-    </ul>
-
-    <a href="/surat-digital/resources/views/login.blade.php" class="btn-keluar">
-        <i class="fa-solid fa-circle-left me-2"></i> Keluar
-    </a>
-</div>
-
-<div class="main-content">
-
-    <div class="header-bar">
-        <div></div>
-        <div class="fw-bold"><i class="fa-solid fa-user-circle"></i> Admin</div>
-    </div>
-
-    <div class="dashboard-title">
-        <i class="fa-solid fa-envelope-open-text me-2"></i> Surat Masuk
-    </div>
-
-    <div class="content-body">
-        <div class="bottom-grid">
-
-            <!-- TABEL SURAT -->
-            <div class="card-panel">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>Prodi</th>
-                            <th>Gol</th>
-                            <th>NIM</th>
-                            <th>Semester</th>
-                            <th>Surat</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1.</td>
-                            <td>Rayhan Riyadhul Jinan</td>
-                            <td>Teknik Informatika</td>
-                            <td>C</td>
-                            <td>E41250835</td>
-                            <td>2</td>
-                            <td>
-                                <a href="#" class="pdf-link">
-                                    <i class="fa-solid fa-file-pdf"></i> .pdf
-                                </a>
-                            </td>
-                            <td>
-                                <span class="status-btn">Terverifikasi</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- NOTIF -->
-            <div class="card-panel">
-                <h6 class="fw-bold mb-4">
-                    <i class="fa-solid fa-bell me-2"></i> Notifikasi
-                </h6>
-                <ul class="notif-list">
-                    <li class="notif-item">1. <b>IZIN MASUK</b> – Rayhan</li>
-                    <li class="notif-item">2. <b>IZIN DITOLAK</b> – Rayhan</li>
-                    <li class="notif-item">3. <b>IZIN MASUK</b> – Rayhan</li>
-                </ul>
-            </div>
-
+        <div class="admin-profile">
+            <div class="profile-img"></div>
+            <span>Admin</span>
         </div>
+
+        <ul class="notif-list">
+            @foreach ($surats->take(5) as $key => $s)
+                <li class="notif-item">
+                    {{ $key + 1 }}.
+                    <b>{{ strtoupper($s->jenisSurat->nama_surat) }}</b> – {{ $s->user->name }}
+                    ({{ ucfirst($s->status) }})
+                </li>
+            @endforeach
+        </ul>{{-- <ul class="nav-menu">
+            <li><a href="/surat-digital/resources/views/admin/dashboard-admin.blade.php" class="nav-item"><i
+                        class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a href="/surat-digital/resources/views/admin/surat-masuk-admin.blade.php" class="nav-item"><i
+                        class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a></li>
+            <li><a href="/surat-digital/resources/views/admin/riwayat-admin.blade.php" class="nav-item"><i
+                        class="fa-solid fa-clock-rotate-left"></i> Riwayat</a></li>
+        </ul> --}}
+
+        <a href="/surat-digital/resources/views/login.blade.php" class="btn-keluar">
+            <i class="fa-solid fa-circle-left me-2"></i> Keluar
+        </a>
     </div>
 
-</div>
+    <div class="main-content">
 
-</body>
+        <div class="header-bar">
+            <div></div>
+            <div class="fw-bold"><i class="fa-solid fa-user-circle"></i> Admin</div>
+        </div>
+
+        <div class="dashboard-title">
+            <i class="fa-solid fa-envelope-open-text me-2"></i> Surat Masuk
+        </div>
+
+        <div class="content-body">
+            <div class="bottom-grid">
+
+                <!-- TABEL SURAT -->
+                <div class="card-panel">
+                    <table>
+                        <thead>
+                        <tbody>
+                            @forelse($surats as $key => $s)
+                                <tr>
+                                    <td>{{ $key + 1 }}.</td>
+                                    <td>{{ $s->user->name }}</td>
+                                    <td>{{ $s->user->prodi->nama_prodi ?? '-' }}</td>
+                                    <td>{{ $s->user->golongan->nama_golongan ?? '-' }}</td>
+                                    <td>{{ $s->user->nim ?? '-' }}</td>
+                                    <td>{{ $s->semester ?? '2' }}</td>
+                                    <td>
+                                        @if ($s->status == 'disetujui')
+                                            <a href="#" class="pdf-link">
+                                                <i class="fa-solid fa-file-pdf"></i> .pdf
+                                            </a>
+                                        @else
+                                            <span class="text-muted">Proses</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if ($s->status == 'tertunda')
+                                            <form action="{{ route('admin.surat.updateStatus', $s->id) }}"
+                                                method="POST">
+                                                @csrf
+                                                @method('PATCH')
+                                                <button name="status" value="disetujui"
+                                                    class="btn btn-sm btn-success">Setujui</button>
+                                                <button name="status" value="ditolak"
+                                                    class="btn btn-sm btn-danger">Tolak</button>
+                                            </form>
+                                        @else
+                                            <span
+                                                class="status-btn {{ $s->status == 'disetujui' ? 'bg-success' : 'bg-danger' }}">
+                                                {{ ucfirst($s->status) }}
+                                            </span>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="8" class="text-center">Belum ada pengajuan surat.</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+
 </html>

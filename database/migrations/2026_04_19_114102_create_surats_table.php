@@ -23,7 +23,7 @@ return new class extends Migration
             $table->text('catatan_penolakan')->nullable();
             $table->foreignId('diverifikasi_oleh')->nullable()->constrained('users')->onDelete('set null');
             $table->timestamp('diverifikasi_pada')->nullable();
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
     /**

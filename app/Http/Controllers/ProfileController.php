@@ -11,22 +11,31 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
-    /**
-     * Display the user's profile form.
-     */
+    // edit
     public function edit(Request $request): View
     {
         return view('profile.edit', [
             'user' => $request->user(),
         ]);
     }
-
-    /**
-     * Update the user's profile information.
-     */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    // update
+    public function update(Request $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        //VALIDASI
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users,email,' . $request->user()->id],
+            'nim' => ['nullable', 'regex:/^E\d{8}$/', 'unique:users,nim,' . $request->user()->id],
+            'nip' => ['nullable', 'regex:/^[0-9.]+$/'],
+            'prodi_id' => ['required', 'exists:prodis,id'],
+            'golongan_id' => ['required', 'exists:golongans,id'],
+        ], [
+            'nim.regex' => 'Format NIM salah! Contoh: E41250904',
+            'nip.regex' => 'NIP hanya boleh berisi angka dan titik.',
+        ]);
+
+        // --- STEP 2: FILL & SAVE (PBO: Persistence) ---
+        $request->user()->fill($request->all());
 
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
@@ -37,9 +46,6 @@ class ProfileController extends Controller
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
 
-    /**
-     * Delete the user's account.
-     */
     public function destroy(Request $request): RedirectResponse
     {
         $request->validateWithBag('userDeletion', [
@@ -49,9 +55,7 @@ class ProfileController extends Controller
         $user = $request->user();
 
         Auth::logout();
-
         $user->delete();
-
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
